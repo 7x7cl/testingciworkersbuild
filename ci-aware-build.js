@@ -79,7 +79,7 @@ function gatherGitData() {
   addGitEntry('Describe', runGitCommand(['describe', '--always', '--dirty', '--tags']));
   addGitEntry('Remote Origin', runGitCommand(['config', '--get', 'remote.origin.url']));
   addGitEntry('Remotes', runGitCommand(['remote', '-v']));
-  addGitEntry('Last Commit', runGitCommand(['log', '-1', '--pretty=%H %s']));
+  addGitEntry('Commit Message', runGitCommand(['log', '-1', '--pretty=%s']));
   addGitEntry('Last Commit Author', runGitCommand(['log', '-1', '--pretty=%an <%ae>']));
   addGitEntry('Last Commit Committer', runGitCommand(['log', '-1', '--pretty=%cn <%ce>']));
   addGitEntry('Last Commit Date', runGitCommand(['log', '-1', '--pretty=%cI']));
